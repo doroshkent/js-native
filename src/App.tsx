@@ -1,19 +1,19 @@
 import './App.css';
-import styled from 'styled-components';
+import { MapFunc } from './hw/MapFunc'
+import { FilterFunc } from "./hw/FilterFunc";
 
 
 function App() {
-    return (
-        <div className="App">
-            <Title>Welcome to IT-INCUBATOR</Title>
-        </div>
-    );
+  const topCars = [
+    { manufacturer: 'BMW', model: 'm5cs' },
+    { manufacturer: 'Mercedes', model: 'e63s' },
+    { manufacturer: 'Audi', model: 'rs6' }
+  ]
+
+  return <>
+    <MapFunc cars={ topCars }/>
+    <FilterFunc />
+  </>
 }
 
 export default App;
-
-const Title = styled.h1`
-    font-size: 1.5em;
-    text-align: center;
-    color: #e91e63;
-`;
